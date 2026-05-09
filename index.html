@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WILD DROP — Premium Streetwear</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap" rel="stylesheet"/>
+<!-- CSS modular -->
+<link rel="stylesheet" href="css/tokens.css"/>
+<link rel="stylesheet" href="css/navbar.css"/>
+<link rel="stylesheet" href="css/home.css"/>
+<link rel="stylesheet" href="css/catalog.css"/>
+<link rel="stylesheet" href="css/detail.css"/>
+<link rel="stylesheet" href="css/ui.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <nav class="nav-inner">
+    <span class="nav-logo" id="nav-logo">WILD DROP</span>
+    <ul class="nav-links">
+      <li class="nav-link active" data-view="home">Home</li>
+      <li class="nav-link" data-view="catalog">Catálogo</li>
+    </ul>
+    <div class="nav-actions">
+      <span id="user-nav-btn" class="nav-icon-btn" title="Mi cuenta">
+        <span class="material-symbols-outlined">person</span>
+      </span>
+      <span id="cart-nav-btn" class="nav-icon-btn" title="Carrito">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </span>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════════ HOME VIEW ═══════════════ -->
+<div id="home-view" class="view active">
+
+  <!-- HERO — imagen real de streetwear editorial oscuro -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-noise"></div>
+    <!-- Imagen hero: editorial streetwear oscuro, concreto urbano -->
+    <img
+      class="hero-bg-img"
+      src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1800&q=80"
+      alt="Wild Drop Hero — Urban Streetwear"
+      loading="eager"
+    />
+    <div class="hero-image-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Drop 04 — Colección Limitada</p>
+      <h1 class="hero-title">WILD<br/><span>DROP</span></h1>
+      <div class="hero-bottom">
+        <p class="hero-desc">Premium streetwear urbano. Cada pieza es una declaración. Cada drop, un evento.</p>
+        <div class="hero-cta">
+          <button class="btn-primary" id="hero-shop-btn">Ver Catálogo</button>
+          <button class="btn-secondary">Nuestro Manifesto</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND TICKER -->
+  <div class="brand-strip">
+    <div class="brand-ticker" id="brand-ticker"></div>
+  </div>
+
+  <!-- COLLECTIONS -->
+  <section class="section">
+    <p class="section-label">Colecciones</p>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;">
+      <h2 class="section-title" style="margin-bottom:0">Temporada 2024</h2>
+      <button class="btn-secondary" id="home-catalog-btn" style="padding:12px 28px;font-size:10px;">Ver Todo</button>
+    </div>
+    <div class="collections-grid" id="collections-grid"></div>
+  </section>
+
+  <!-- ABOUT — imagen real reemplaza el placeholder "WD" -->
+  <section style="background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="section" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div>
+        <p class="section-label">Nuestra Esencia</p>
+        <h2 class="section-title">THE WILD<br/>ESSENCE.</h2>
+        <div style="width:48px;height:2px;background:var(--silver);margin-bottom:32px;"></div>
+        <p style="font-size:15px;line-height:1.8;color:var(--text-muted);margin-bottom:20px;max-width:420px;">Wild Drop no es solo una etiqueta; es una respuesta técnica al caos urbano. Creemos en energía de alto octanaje filtrada a través de un lente minimalista.</p>
+        <p style="font-size:13px;line-height:1.8;color:var(--text-dim);max-width:400px;">Fundada en el corazón del sprawl de concreto, nuestra misión es proveer la armadura para el explorador moderno. Cada drop es una declaración limitada de autenticidad, artesanía y estilo inquebrantable.</p>
+      </div>
+      <!-- Imagen real: moda urbana editorial -->
+      <div class="about-img-wrap">
+        <img
+          class="about-img"
+          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1000&q=80"
+          alt="Wild Drop — The Wild Essence"
+          loading="lazy"
+        />
+        <div class="about-badge">
+          <span style="font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--gold);">EST. 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED EDITORIAL — nueva sección con imagen adicional -->
+  <section class="section" style="padding-top:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:var(--border);">
+      <div style="position:relative;overflow:hidden;height:400px;background:var(--bg-card);">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80" alt="Editorial 1" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;filter:grayscale(70%) brightness(0.6);transition:filter 0.6s ease,transform 0.6s ease;"
+          onmouseenter="this.style.filter='grayscale(20%) brightness(0.85)';this.style.transform='scale(1.04)'"
+          onmouseleave="this.style.filter='grayscale(70%) brightness(0.6)';this.style.transform='scale(1)'"
+        />
+        <div style="position:absolute;bottom:24px;left:24px;">
+          <p style="font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Drop 04</p>
+          <p style="font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;">Silueta Urbana</p>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;height:400px;background:var(--bg-card);">
+        <img src="https://images.unsplash.com/photo-1496217590455-aa63a8550c23?w=800&q=80" alt="Editorial 2" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;filter:grayscale(70%) brightness(0.6);transition:filter 0.6s ease,transform 0.6s ease;"
+          onmouseenter="this.style.filter='grayscale(20%) brightness(0.85)';this.style.transform='scale(1.04)'"
+          onmouseleave="this.style.filter='grayscale(70%) brightness(0.6)';this.style.transform='scale(1)'"
+        />
+        <div style="position:absolute;bottom:24px;left:24px;">
+          <p style="font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Limited</p>
+          <p style="font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;">Minimalismo</p>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;height:400px;background:var(--bg-card);">
+        <img src="https://images.unsplash.com/photo-1550246140-29f40b909e5a?w=800&q=80" alt="Editorial 3" loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;filter:grayscale(70%) brightness(0.6);transition:filter 0.6s ease,transform 0.6s ease;"
+          onmouseenter="this.style.filter='grayscale(20%) brightness(0.85)';this.style.transform='scale(1.04)'"
+          onmouseleave="this.style.filter='grayscale(70%) brightness(0.6)';this.style.transform='scale(1)'"
+        />
+        <div style="position:absolute;bottom:24px;left:24px;">
+          <p style="font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Culture</p>
+          <p style="font-family:var(--font-display);font-weight:800;font-size:18px;text-transform:uppercase;">Concreto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section">
+    <div style="max-width:640px;margin:0 auto;text-align:center;border:1px solid var(--border);padding:64px;background:var(--bg-card);">
+      <p class="section-label">Newsletter</p>
+      <h2 style="font-family:var(--font-display);font-weight:800;font-size:32px;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:16px;">NUNCA PIERDAS<br/>UN DROP</h2>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:40px;">Acceso anticipado a passwords de lanzamiento y especificaciones técnicas exclusivas.</p>
+      <div style="display:flex;border-bottom:2px solid var(--border);margin-bottom:16px;">
+        <input id="newsletter-input" type="email" placeholder="TU CORREO ELECTRÓNICO"
+          style="flex:1;background:transparent;border:none;padding:16px 0;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);outline:none;font-family:var(--font-body);" />
+        <button id="newsletter-btn" style="padding:0 32px;font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;background:transparent;color:var(--text);transition:color var(--transition);">Unirse</button>
+      </div>
+      <p style="font-size:10px;color:var(--text-dim);letter-spacing:0.05em;">Al suscribirte aceptas nuestros Términos y Política de Privacidad.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">WILD DROP</div>
+        <p class="footer-brand-desc">Premium urban streetwear supply. Engineered for authenticity. Crafted for the culture.</p>
+        <div style="display:flex;gap:16px;">
+          <span class="material-symbols-outlined" style="color:var(--text-muted);cursor:pointer;transition:color var(--transition);" onmouseenter="this.style.color='var(--text)'" onmouseleave="this.style.color='var(--text-muted)'">language</span>
+          <span class="material-symbols-outlined" style="color:var(--text-muted);cursor:pointer;transition:color var(--transition);" onmouseenter="this.style.color='var(--text)'" onmouseleave="this.style.color='var(--text-muted)'">videocam</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Tienda</div>
+        <ul class="footer-links">
+          <li class="footer-link">T-Shirts</li>
+          <li class="footer-link">Hoodies</li>
+          <li class="footer-link">Accesorios</li>
+          <li class="footer-link">Archivos</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Soporte</div>
+        <ul class="footer-links">
+          <li class="footer-link">Envíos</li>
+          <li class="footer-link">Devoluciones</li>
+          <li class="footer-link">Términos</li>
+          <li class="footer-link">Newsletter</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Logística</div>
+        <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);">Envíos Globales</p>
+        <p style="font-size:12px;color:var(--text-muted);margin-top:8px;">Disponible a nivel mundial</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Wild Drop Streetwear Supply. Todos los derechos reservados.</p>
+      <p class="footer-copy">Hecho con precisión industrial.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════ CATALOG VIEW ═══════════════ -->
+<div id="catalog-view" class="view">
+  <div class="catalog-header">
+    <div class="catalog-top">
+      <div>
+        <h1 class="catalog-title">Catálogo</h1>
+        <p class="catalog-count" id="catalog-count">Cargando productos...</p>
+      </div>
+    </div>
+    <div class="filter-bar" id="filter-bar"></div>
+  </div>
+  <div class="catalog-grid-wrapper">
+    <div class="catalog-grid" id="catalog-grid"></div>
+  </div>
+  <footer>
+    <div class="footer-bottom" style="border-top:1px solid var(--border);padding-top:24px;max-width:1440px;margin:0 auto;">
+      <p class="footer-copy">© 2024 Wild Drop Streetwear Supply.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════ DETAIL VIEW ═══════════════ -->
+<div id="detail-view" class="view">
+  <div class="detail-inner">
+    <div class="breadcrumb">
+      <span id="bc-home">Home</span>
+      <span class="breadcrumb-sep">/</span>
+      <span id="bc-catalog">Catálogo</span>
+      <span class="breadcrumb-sep">/</span>
+      <span id="bc-product" style="color:var(--text)">Producto</span>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-gallery">
+        <div class="detail-main-img" id="detail-main-img">
+          <img id="detail-img-main" src="" alt=""/>
+        </div>
+        <div class="detail-thumbs" id="detail-thumbs"></div>
+      </div>
+      <div class="detail-info">
+        <p class="detail-drop-label" id="detail-drop"></p>
+        <h1 class="detail-name" id="detail-name"></h1>
+        <p class="detail-price" id="detail-price"></p>
+        <div class="detail-divider"></div>
+        <p class="detail-desc" id="detail-desc"></p>
+        <div class="detail-specs" id="detail-specs"></div>
+        <div class="size-section">
+          <div class="size-header">
+            <span class="size-header-label">Selecciona Talla</span>
+            <span class="size-guide-link">Guía de Tallas</span>
+          </div>
+          <div class="size-grid" id="size-grid"></div>
+        </div>
+        <div class="detail-actions">
+          <button class="btn-add-detail" id="btn-add-detail">Agregar al Carrito</button>
+          <button class="btn-wishlist">♡ &nbsp;Añadir a Wishlist</button>
+        </div>
+        <div class="detail-divider" style="margin-top:32px;"></div>
+        <div id="accordions"></div>
+      </div>
+    </div>
+  </div>
+  <div class="related-section">
+    <h2 class="related-title">Completa El Look</h2>
+    <div class="related-grid" id="related-grid"></div>
+  </div>
+  <footer>
+    <div class="footer-bottom" style="border-top:1px solid var(--border);padding-top:24px;max-width:1440px;margin:0 auto;">
+      <p class="footer-copy">© 2024 Wild Drop Streetwear Supply.</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════ CART PANEL ═══════════════ -->
+<div id="cart-overlay"></div>
+<div id="cart-panel">
+  <div class="cart-panel-header">
+    <span class="cart-panel-title">Tu Carrito</span>
+    <button class="cart-close-btn" id="cart-close-btn">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+  <div class="cart-items-list" id="cart-items-list"></div>
+  <div class="cart-panel-footer" id="cart-panel-footer" style="display:none;">
+    <div class="cart-summary-row">
+      <span class="cart-summary-label">Subtotal</span>
+      <span class="cart-summary-value" id="cart-subtotal">$0.00</span>
+    </div>
+    <div class="cart-summary-row">
+      <span class="cart-summary-label">Envío</span>
+      <span class="cart-summary-value">Calculado al pagar</span>
+    </div>
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-value" id="cart-total">$0.00</span>
+    </div>
+    <button class="btn-checkout" id="btn-checkout">Proceder al Pago</button>
+    <button class="btn-clear-cart" id="btn-clear-cart">Vaciar Carrito</button>
+  </div>
+</div>
+
+<!-- ═══════════════ LOGIN MODAL ═══════════════ -->
+<div id="login-overlay">
+  <div class="login-box">
+    <button class="login-close" id="login-close">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <h2 class="login-title" id="login-title">Mi Cuenta</h2>
+    <p class="login-subtitle" id="login-subtitle">Accede para ver tus pedidos y drops exclusivos.</p>
+    <div class="login-tabs">
+      <button class="login-tab active" data-tab="login">Iniciar Sesión</button>
+      <button class="login-tab" data-tab="register">Registrarse</button>
+    </div>
+    <div class="login-form active" id="tab-login">
+      <div class="form-field">
+        <label class="form-label">Correo Electrónico</label>
+        <input class="form-input" id="login-email" type="email" placeholder="tu@correo.com"/>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Contraseña</label>
+        <input class="form-input" id="login-password" type="password" placeholder="••••••••"/>
+      </div>
+      <button class="btn-primary" id="login-btn" style="width:100%;padding:16px;margin-top:8px;">Entrar</button>
+    </div>
+    <div class="login-form" id="tab-register">
+      <div class="form-field">
+        <label class="form-label">Nombre Completo</label>
+        <input class="form-input" id="reg-name" type="text" placeholder="Tu nombre"/>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Correo Electrónico</label>
+        <input class="form-input" id="reg-email" type="email" placeholder="tu@correo.com"/>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Contraseña</label>
+        <input class="form-input" id="reg-password" type="password" placeholder="Mínimo 6 caracteres"/>
+      </div>
+      <button class="btn-primary" id="register-btn" style="width:100%;padding:16px;margin-top:8px;">Crear Cuenta</button>
+    </div>
+    <div id="user-logged-panel" style="display:none;">
+      <div style="text-align:center;padding:16px 0;">
+        <span class="material-symbols-outlined" style="font-size:48px;color:var(--gold);">account_circle</span>
+        <p id="logged-name" style="font-family:var(--font-display);font-weight:800;font-size:20px;text-transform:uppercase;margin-top:12px;"></p>
+        <p id="logged-email" style="font-size:12px;color:var(--text-muted);margin-top:4px;letter-spacing:0.05em;"></p>
+        <p id="logged-role" style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:8px;"></p>
+      </div>
+      <button class="btn-secondary" id="logout-btn" style="width:100%;padding:14px;margin-top:24px;font-size:11px;">Cerrar Sesión</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div id="toast-container"></div>
+
+<!-- ═══════════════ SCRIPTS POO ═══════════════ -->
+<script src="js/models/Product.js"></script>
+<script src="js/models/CartItem.js"></script>
+<script src="js/models/Cart.js"></script>
+<script src="js/models/User.js"></script>
+<script src="js/models/Order.js"></script>
+<script src="js/app/data.js"></script>
+<script src="js/app/App.js"></script>
+
+</body>
+</html>
