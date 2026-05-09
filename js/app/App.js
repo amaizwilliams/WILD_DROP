@@ -105,7 +105,7 @@ class App {
   _renderCollections() {
     const grid = document.getElementById('collections-grid');
     const cols = [
-      { name: 'Hoodies',    sub: 'Explora',  filter: 'Hoodies',    large: true, img: 'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=1200&q=80' },
+      { name: 'Hoodies',    sub: 'Explora',  filter: 'Hoodies',    large: true, img: 'https://hips.hearstapps.com/hmg-prod/images/mhl-hoodies-alo-1114-68eea4114bc89.jpg?crop=1xw:1xh;center,top&resize=1120:*' },
       { name: 'T-Shirts',   sub: 'Ver Todo', filter: 'T-Shirts',               img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80' },
       { name: 'Accesorios', sub: 'Shop',     filter: 'Accesorios',              img: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=800&q=80' },
     ];
